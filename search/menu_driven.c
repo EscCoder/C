@@ -10,7 +10,7 @@
 void linear( int arr[len], int size)
 {
     int i;
-    int key;
+    int key,flag=0;
     printf("Linear Search \n");
     /*
     for(i=0;i<size;i++)
@@ -25,10 +25,15 @@ void linear( int arr[len], int size)
      {
          if (key==arr[i])
          {
+             flag=flag+1;
              printf("Element found at %d  position\n",i+1);
         }
      }
     
+    if (flag==0)
+    {
+        printf("Element not found");
+    }
 }
 
 
@@ -36,7 +41,7 @@ void binary(int arr[len], int size)
 {
     int i,swap;
     int temp=0,find,mid;
-    int l=0, h=size-1;
+    int l=0, h=size-1,flag=0;
     
     printf("Binary Search, we need to sort our array first\n ");
     printf("Before sorting array is \n ");
@@ -75,6 +80,7 @@ void binary(int arr[len], int size)
         mid=(l+h)/2;
         if (arr[mid]==find)
         {
+            flag=flag+1;
             printf("Element %d found at %d",find,mid+1);
             break;
         }
@@ -88,6 +94,11 @@ void binary(int arr[len], int size)
         }
         
     }
+    
+    if (flag==0) 
+   {
+       printf("Element not found");
+   }
     
 }
 
