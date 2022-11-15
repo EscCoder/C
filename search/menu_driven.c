@@ -1,4 +1,9 @@
-// Online C compiler to run C program online
+// Aim:To implement a menu driven program for linear and binary search methods 
+//  and demonstrate their constrains
+
+
+
+
 #include <stdio.h>
 #define len 50
 
@@ -6,7 +11,7 @@ void linear( int arr[len], int size)
 {
     int i;
     int key;
-    printf("WE are in a linear function \n");
+    printf("Linear Search \n");
     /*
     for(i=0;i<size;i++)
     {
@@ -33,7 +38,7 @@ void binary(int arr[len], int size)
     int temp=0,find,mid;
     int l=0, h=size-1;
     
-    printf("WE are in a binary function, we need to sort our array first\n ");
+    printf("Binary Search, we need to sort our array first\n ");
     printf("Before sorting array is \n ");
     for(i=0;i<size;i++)
     {
@@ -58,31 +63,33 @@ void binary(int arr[len], int size)
     printf("\nAfter sorting array is \n ");
     for(i=0;i<size;i++)
     {
-        printf("%d;",arr[i]);
+        printf("%d ",arr[i]);
     }
     
     
     printf("\nEnter a number you want to find\n ");
     scanf("%d",&find);
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     for(i=0;i<size;i++)
+    {
+        mid=(l+h)/2;
+        if (arr[mid]==find)
+        {
+            printf("Element %d found at %d",find,mid+1);
+            break;
+        }
+        else if (arr[mid]<find)
+        {
+            l=mid+1;
+        }
+        else//(arr[mid]>find)
+        {
+            h=h-1;
+        }
+        
+    }
     
 }
-
-
-
-
-
-
-
 
 
 
@@ -117,11 +124,11 @@ void main()
     {
         case 1:
             linear(arr,size);
-            printf("\nLinear search completed and exiting");
+            printf("\nLinear search completed and exiting----");
             break;
         case 2:
             binary(arr,size);
-            printf("\nBinary search completed and exiting");
+            printf("\nBinary search completed and exiting----");
             break;
         default:
             printf("--------End------------");
@@ -146,3 +153,7 @@ void main()
     }
     */
 }
+    
+    
+    
+ 
