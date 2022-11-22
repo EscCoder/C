@@ -8,7 +8,7 @@ void main()
     int i,j;
     int arr[size],len;
     
-    printf("Selection sort\n");
+    printf("Selection sort:By Pallavi Khode\n");
     printf("Enter the length of the array :\n");
     scanf("%d",&len);
     
