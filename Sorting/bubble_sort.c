@@ -9,7 +9,7 @@ void main()
     int arr[size];
     int temp,len;
     
-    printf("Bubble sort\n");
+    printf("Bubble sort:By Pallavi Khode\n");
     printf("Enter the size of your array : ");
     scanf("%d",&len);
     
