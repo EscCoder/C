@@ -8,6 +8,7 @@ void main()
     int i,n;
     int *ptr;
     
+    printf("Memory allocation: initial value is garbage\n");
     printf("This is to demonstrate the use of malloc() function, \na predefined function used in dynamic memory allocation:\n");
     printf("\tEnter the number of intergers :\n");
     scanf("%d",&n);
