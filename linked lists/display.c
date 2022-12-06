@@ -4,16 +4,16 @@
 
 struct wea
 {
-    char day[10];
+    char day[10];                           //structure for node
     int temp;
     struct wea *link;
 };
-typedef struct wea node;
+typedef struct wea node;                    // use struct wea as node
 
 node *list()
 {
     int i,n=7;
-    node *head,*p;
+    node *p,*head;                          //pointer as function
     
     printf("This is the record of temperatures for first week of december:\n");
     printf("Enter the day and temperature on that respective day:\n");
@@ -22,12 +22,12 @@ node *list()
     {
         if (i==0)
         {
-            head =(node*)malloc(sizeof(node));
+            head =(node*)malloc(sizeof(node));                    //create memory space
             p=head;
         }
         else
         {
-            p->link=(node*)malloc(sizeof(node));
+            p->link=(node*)malloc(sizeof(node));                  //creare memory space
             p=p->link;
         }
         printf("\nSr No. %d\n",i+1);
@@ -35,8 +35,9 @@ node *list()
         scanf("%s %d",&p->day,&p->temp);
     }
     
-    p->link=NULL;
-    return(head);
+    p->link=NULL;                                                 //link of last node points at NULL 
+   
+    return(head);                        // return head
 }
 
 void display(node *head)
@@ -60,6 +61,6 @@ void display(node *head)
 void main()
 {
     node *head;
-    list(head);
-    display(head);
+    head= list();                 //catch the returned head
+    display(head);                // pass that head to display
 }
