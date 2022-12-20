@@ -17,15 +17,17 @@ void display(node *head)
     
     p=head;
     
+    printf("Double linked list :\n");
     while(p!=NULL)
     {
         q=p;
         printf("%d\t",p->data);
         p=p->next;
     }
-    
+    printf("\n");
     //q=p;
     
+    printf("Reveresd Double linked list :\n");
     while(q !=NULL)
     {
         printf("%d\t",q->data);
